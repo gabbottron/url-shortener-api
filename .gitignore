@@ -34,3 +34,5 @@
 # Ignore Mac hidden files
 .DS_Store
 
+
+/config/credentials/development.key
