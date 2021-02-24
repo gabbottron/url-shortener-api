@@ -13,9 +13,9 @@ A challenge project to implement a URL shortener API
 ```
 1. Pull the repository
 2. bundle install
-3. bundle exec rails db:migrate
-4. bundle exec rails credentials:edit --environment development
-5. bundle exec rails credentials:edit --environment test
+3. bundle exec rails credentials:edit --environment development
+4. bundle exec rails credentials:edit --environment test
+5. bundle exec rails db:migrate
 ### Your credentials files should look like this:
 jwt:
   secret: mysecretkeygoeshere
