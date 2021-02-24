@@ -10,4 +10,10 @@ class User < ApplicationRecord
   # This must be included for the password checking 
   # that devise does -gabbott
   devise :database_authenticatable
+
+  validates :email, uniqueness: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+
+  validates_length_of :password, minimum: 6, maximum: 18
+
 end

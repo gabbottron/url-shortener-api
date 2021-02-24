@@ -5,7 +5,7 @@ A challenge project to implement a URL shortener API
 #### Dependencies
 1. Ruby 2.6.3
 2. Rails 6.0.3
-3. A valid credentials file with JWT secret
+3. Valid credentials files with JWT secret
 
 **IMPORTANT:** Before running this project locally, you MUST have credentials set up for development (see steps below!)
 
@@ -15,9 +15,22 @@ A challenge project to implement a URL shortener API
 2. bundle install
 3. bundle exec rails db:migrate
 4. bundle exec rails credentials:edit --environment development
-### Your credentials file should look like this:
+5. bundle exec rails credentials:edit --environment test
+### Your credentials files should look like this:
 jwt:
   secret: mysecretkeygoeshere
+```
+
+### Testing
+```
+Tests are comprehensive, so be sure all setup steps above were followed. They will require the JWT secret!
+bundle exec rspec
+```
+
+### Running the server
+```
+Be sure to follow project setup tasks above before running:
+bundle exec rails s
 ```
 
 **DEFAULT URI:** http://localhost:3000
