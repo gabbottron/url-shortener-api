@@ -44,7 +44,6 @@ class UrlsController < SecuredController
       update_params[:slug] = params[:slug] if params.key?(:slug)
       update_params[:active] = params[:active] if params.key?(:active)
       if @url.update(update_params)
-        #render :json => {:message => "URL Updated!"}, status: :ok
         render json: @url
       else
         render :json => @url.errors.to_json, status: :unprocessable_entity
